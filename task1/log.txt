@@ -1,0 +1,5 @@
+commit 1581a12426c2fee7b7aab68341d787a2a50f84e0
+Author: ArtsiomFortunatov <artsiom@admin.com>
+Date:   Wed Jun 9 10:29:59 2021 +0300
+
+    add status.txt
