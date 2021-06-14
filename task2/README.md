@@ -50,3 +50,5 @@ EOF
   <p>
     <img src="https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task2/AddUserData.png" alt="Scr" width="80" height="80">
   </p>
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task2/AddUserData.png)
