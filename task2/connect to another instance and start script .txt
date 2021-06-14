@@ -1,1 +1,3 @@
+ ssh-keygen -t rsa -N "" -f /home/ec2-user/.ssh/id_rsa
+ cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/my.key ec2-user@172.31.2.70 "cat >> ~/.ssh/authorized_keys" 
  ssh 172.31.2.70 'bash -s' < httpd.sh
