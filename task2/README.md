@@ -48,5 +48,5 @@ EOF
 <br />
 <p align="center">
   <a href="https://github.com/ArtsiomFortunatov/exadel_internship">
-    <img src="task2/AddUserdata.png" alt="Scr" width="80" height="80">
+    <img src="task2/AddUserData.png" alt="Scr" width="80" height="80">
   </a>
