@@ -47,3 +47,6 @@ EOF
 ### Добавления скрипта к выполнению, во время разворачивания нового инстанса:
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task2/AddUserData.png)
+
+### Ссылка на  веб страницу без использования скрипта:
+http://ec2-18-156-199-85.eu-central-1.compute.amazonaws.com/
