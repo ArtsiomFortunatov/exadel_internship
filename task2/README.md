@@ -47,6 +47,6 @@ EOF
 ### Добавления скрипта к выполнению, во время разворачивания нового инстанса:
 <br />
 <p align="center">
-  <a href="https://github.com/ArtsiomFortunatov/exadel_internship/task2">
+  <a href="https://github.com/ArtsiomFortunatov/exadel_internship/task2/AddUserData.png">
     <img src="AddUserData.png" alt="Scr" width="80" height="80">
   </a>
