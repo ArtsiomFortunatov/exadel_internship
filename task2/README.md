@@ -48,5 +48,5 @@ EOF
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task2/AddUserData.png)
 
-### Ссылка на  веб страницу без использования скрипта:
+### Ссылка на  веб страницу c использованием скрипта и авторазворачивания:
 http://ec2-18-156-199-85.eu-central-1.compute.amazonaws.com/
