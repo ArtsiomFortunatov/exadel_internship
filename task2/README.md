@@ -45,10 +45,5 @@ EOF
    * Переменная SMALVERSIONVERSION получает информацию обрезанную по определенному полю
    ```
 ### Добавления скрипта к выполнению, во время разворачивания нового инстанса:
-<br />
-<p align="center">
-  <p>
-    <img src="https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task2/AddUserData.png" alt="Scr" width="80" height="80">
-  </p>
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task2/AddUserData.png)
