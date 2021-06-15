@@ -39,3 +39,9 @@ sudo docker run hello-world
 * Вывод команды:
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task3/HelloWorld.png)
+
+### Extratask 2. Html page:
+* Создан простой Html файл index.html, проброшен в контейнер httpd:
+```sh
+   docker container  run -d -p 80:80 --name httpd -v /opt/exadel/forhttpd/index.html:/usr/local/apache2/htdocs/index.html httpd
+   ```
