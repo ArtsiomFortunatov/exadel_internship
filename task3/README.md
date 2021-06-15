@@ -14,4 +14,5 @@
    docker run hello-world
    ```
 * Вывод команды:
+
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task3/HelloWorld.png)
