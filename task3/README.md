@@ -46,4 +46,5 @@ sudo docker run hello-world
    docker container  run -d -p 80:80 --name httpd -v /opt/exadel/forhttpd/index.html:/usr/local/apache2/htdocs/index.html httpd
    ```
 * Результат:
+
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task3/image/ChangeHtml.png)
