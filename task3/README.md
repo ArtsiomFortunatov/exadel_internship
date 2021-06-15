@@ -10,7 +10,7 @@
    systemctl status  docker    *Проверка статуса
    ```
 ### Extratask 1. Устанвока docker чеерз скрипт:
-* Скипт на основе команд из официальной документации,в том числе с проверкой и удалением старых версий:
+* Скипт **autoinstall.sh** на основе команд из официальной документации,в том числе с проверкой и удалением старых версий:
 ```sh
 #!/bin/bash
 sudo yum remove -y docker \
@@ -41,7 +41,7 @@ sudo docker run hello-world
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task3/HelloWorld.png)
 
 ### Extratask 2. Html page:
-* Создан простой Html файл index.html, проброшен в контейнер httpd:
+* Создан простой Html файл **index.html**, проброшен в контейнер httpd:
 ```sh
    docker container  run -d -p 80:80 --name httpd -v /opt/exadel/forhttpd/index.html:/usr/local/apache2/htdocs/index.html httpd
    ```
