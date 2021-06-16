@@ -63,4 +63,5 @@ sudo docker run hello-world
    ```
 * Результат:
 
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task3/image/Dockerfile.png)
 
