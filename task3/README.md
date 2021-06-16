@@ -67,3 +67,9 @@ RUN  echo $DEVOPS >> index.html
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task3/image/Dockerfile.png)
 
+###Subtask 4.1
+* Образ загружен на DockerHub получить можно командой:
+
+```sh
+   docker pull 2757429/exadel
+   ```
