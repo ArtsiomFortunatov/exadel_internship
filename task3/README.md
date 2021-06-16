@@ -49,7 +49,8 @@ sudo docker run hello-world
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task3/image/ChangeHtml.png)
 
-###Subtasks 3.1/3.2 + Extratasks 3.1.1/3.2.1 . Dockerfile
+### Subtasks 3.1/3.2 + Extratasks 3.1.1/3.2.1 . Dockerfile
+
 ```sh
    FROM centos:7
 
