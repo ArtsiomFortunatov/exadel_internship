@@ -9,7 +9,7 @@
    systemctl enable  docker    *Автозапуск после рестарта
    systemctl status  docker    *Проверка статуса
    ```
-### Extratask 1. Устанвока docker чеерз скрипт:
+### Extratask 1.1 Устанвока docker чеерз скрипт:
 * Скипт **autoinstall.sh** на основе команд из официальной документации,в том числе с проверкой и удалением старых версий:
 ```sh
 #!/bin/bash
@@ -32,7 +32,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo docker run hello-world
    ```
-### Subtask 2. Проверка работоспособности (Hello-World)
+### Subtask 2.1 Проверка работоспособности (Hello-World)
 ```sh
    docker run hello-world
    ```
@@ -48,3 +48,19 @@ sudo docker run hello-world
 * Результат:
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task3/image/ChangeHtml.png)
+
+###Subtasks 3.1/3.2 + Extratasks 3.1.1/3.2.1 . Dockerfile
+```sh
+   FROM centos:7
+
+   RUN yum -y install httpd 
+   WORKDIR /var/www/html
+   COPY ./forhttpd/index.html .
+   EXPOSE 80
+   ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+   ENV DEVOPS=ArtsiomFortunatov
+   RUN  echo $DEVOPS >> index.html
+   ```
+* Результат:
+
+
