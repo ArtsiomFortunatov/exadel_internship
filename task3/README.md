@@ -52,15 +52,16 @@ sudo docker run hello-world
 ### Subtasks 3.1/3.2 + Extratasks 3.1.1/3.2.1 . Dockerfile
 
 ```sh
-   FROM centos:7
+  FROM centos:7
 
-   RUN yum -y install httpd 
-   WORKDIR /var/www/html
-   COPY ./forhttpd/index.html .
-   EXPOSE 80
-   ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-   ENV DEVOPS=ArtsiomFortunatov
-   RUN  echo $DEVOPS >> index.html
+RUN yum -y install httpd 
+WORKDIR /var/www/html
+COPY ./forhttpd/index.html .
+EXPOSE 80
+ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+ARG NAME=ArtsiomFortunatov
+ENV DEVOPS=$NAME
+RUN  echo $DEVOPS >> index.html
    ```
 * Результат:
 
