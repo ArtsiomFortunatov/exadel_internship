@@ -73,7 +73,7 @@ RUN  echo $DEVOPS >> index.html
 ```sh
    docker pull 2757429/exadel
    ```
-### Subtask 5
+### Subtask 5 + Extratask 5
 
 * Docker-compose:
 ```sh
