@@ -103,4 +103,5 @@ services:
    ```
 * Результат:
 
+
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task3/image/scale.png)
