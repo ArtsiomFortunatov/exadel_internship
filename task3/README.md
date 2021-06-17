@@ -73,3 +73,34 @@ RUN  echo $DEVOPS >> index.html
 ```sh
    docker pull 2757429/exadel
    ```
+### Subtask 5
+
+* Docker-compose:
+```sh
+   version: '2'
+services:
+  web:
+    image: 2757429/exadel
+    ports:
+      - "8075-8085:80"
+  java:
+    container_name: myjava
+    image: milkyway/java-hello-world
+    ports:
+      - "8090:80"
+    depends_on:
+      - "db"
+  db:
+    container_name: mydb
+    image: mongo
+    ports:
+      - "27019:27019"
+   ```
+
+* Запуск compose + scale:
+```sh
+   docker-compose up --scale web=5 -d
+   ```
+* Результат:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task3/image/scale.png)
