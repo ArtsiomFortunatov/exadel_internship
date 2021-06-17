@@ -1,18 +1,18 @@
 version: '2'
 services:
   web:
-    image: 2757429/exadel
+    image: ${ImgWEB}
     ports:
-      - "8075-8085:80"
+      - "${PortWEB}"
   java:
     container_name: myjava
-    image: milkyway/java-hello-world
+    image: ${ImgJava}
     ports:
-      - "8090:80"
+      - "${PortJava}"
     depends_on:
       - "db"
   db:
     container_name: mydb
-    image: mongo
+    image: ${ImgDB}
     ports:
-      - "27019:27019"
+      - "${PortDB}"
