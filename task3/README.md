@@ -77,26 +77,37 @@ RUN  echo $DEVOPS >> index.html
 
 * Docker-compose:
 ```sh
-   version: '2'
+version: '2'
 services:
   web:
-    image: 2757429/exadel
+    image: ${ImgWEB}
     ports:
-      - "8075-8085:80"
+      - "${PortWEB}"
   java:
     container_name: myjava
-    image: milkyway/java-hello-world
+    image: ${ImgJava}
     ports:
-      - "8090:80"
+      - "${PortJava}"
     depends_on:
       - "db"
   db:
     container_name: mydb
-    image: mongo
+    image: ${ImgDB}
     ports:
-      - "27019:27019"
+      - "${PortDB}"
    ```
 
+* .env файл:
+```sh
+  
+ImgWEB=2757429/exadel
+ImgJava=milkyway/java-hello-world
+ImgDB=mongo
+PortWEB=8075-8085:80
+PortJava=8090:80  
+PortDB=27019:27019
+ ```
+ 
 * Запуск compose + scale:
 ```sh
    docker-compose up --scale web=5 -d
