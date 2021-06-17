@@ -1,17 +1,18 @@
-version: '3.9'
+version: '2'
 services:
   web:
     image: 2757429/exadel
     ports:
-      - "8080:80"
+      - "8075-8085:80"
   java:
-    image: jboss/wildfly
+    container_name: myjava
+    image: milkyway/java-hello-world
     ports:
       - "8090:80"
     depends_on:
       - "db"
-    command: ["./wait-for-it.sh", "db:5432"]
   db:
-    image: postgres
+    container_name: mydb
+    image: mongo
     ports:
-      - "5432:5432"
+      - "27019:27019"
