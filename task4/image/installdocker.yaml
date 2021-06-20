@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+
+  tasks:
+    - name: insatll DOCKER
+      yum:
+        name: docker
+        state: latest
+
