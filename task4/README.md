@@ -33,6 +33,10 @@ ansible all -i /home/ec2-user/hosts -m ping
       yum:
         name: docker
         state: latest
+    - name: start DOCKER
+      service:
+        name: docker
+        state: started
 ```
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/installdocker1.png)
