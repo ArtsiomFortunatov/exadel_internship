@@ -8,4 +8,7 @@
       yum:
         name: docker
         state: latest
-
+    - name: start DOCKER
+      service:
+        name: docker
+        state: started
