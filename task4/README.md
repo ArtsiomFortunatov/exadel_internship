@@ -38,7 +38,7 @@ ansible all -i /home/ec2-user/hosts -m ping
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/installdocker1.png)
 
 
-* Результат на управляемых уздах:
+* Результат на управляемых узлах:
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/installdocker2.png)
 
