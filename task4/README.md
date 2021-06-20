@@ -114,9 +114,11 @@ mysql_password: 123a456B
 pma_host: 172.17.0.3
 pma_password: 123a456B 
    ```
+* Файл зашифрован vault, содержимое файла, без ввода пароля:
 
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/extravault.png)
 
-* Результат
+* Итоговый результат 
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/extratask1.png)
 
