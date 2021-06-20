@@ -10,3 +10,41 @@
 * Результат:
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/ansible_install.png)
+
+### Subtask 2. Модуль ping:
+```sh
+ansible all -i /home/ec2-user/hosts -m ping
+```
+* Результат
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/check_ping.png)
+
+### Subtask 3. Install Docker:
+* Код плейбука:
+
+```sh
+---
+
+- hosts: all
+  become: true
+
+  tasks:
+    - name: insatll DOCKER
+      yum:
+        name: docker
+        state: latest
+```
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/installdocker1.png)
+
+
+* Результат на управляемых уздах:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/installdocker2.png)
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/insatlldocker3.png)
+
+
+
+
+
