@@ -1,0 +1,5 @@
+---
+mysql_root_password: 123a456B
+mysql_password: 123a456B
+pma_host: 172.17.0.3
+pma_password: 123a456B 
