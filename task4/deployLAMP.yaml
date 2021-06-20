@@ -1,0 +1,55 @@
+---
+
+- hosts: all
+  become: true
+  #vars_files:
+  # - vars/vars.yaml
+
+  tasks:
+    
+    - name: insatll Python3
+      yum:
+        name: python37
+        state: latest
+      vars:
+          ansible_python_interpreter: /bin/python2.7
+    - name: insatll Modyle 
+      pip:
+        name: "docker<5"
+        executable: pip3.7
+    - name: Insatll container httpd
+      docker_container:
+        name: apache
+        image: httpd
+        ports: ['8080:80']
+      vars:
+          ansible_python_interpreter: /bin/python3.7 
+    - name: Insatll container mysql
+      docker_container:
+        name: mysql
+        image: mysql
+        ports: ['3306:3306']
+        env:
+          MYSQL_ROOT_PASSWORD: 123a456B
+          MYSQL_USER: artsiom
+          MYSQL_PASSWORD: 123a456B
+          MYSQL_DATABASE: TESTDB
+      vars:
+          ansible_python_interpreter: /bin/python3.7 
+    - name: Insatll container phpmyadmin
+      docker_container:
+        name: phpmyadmin
+        image: phpmyadmin
+        ports: ['8090:80']
+        env:
+          PMA_HOST: 172.17.0.3
+          PMA_PORT: "3306"
+          PMA_USER: root
+          PMA_PASSWORD: 123a456B
+      vars:
+          ansible_python_interpreter: /bin/python3.7
+
+         
+         
+    
+     
