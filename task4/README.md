@@ -128,6 +128,58 @@ pma_password: 123a456B
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/extratask1-2.png)
 
+### Extra tasks 3. Dynamic inventory.
+
+* Для dynamic inventory используется модуль amazon.aws.aws_ec2
+* Установка модуля через galaxy:
+
+```sh
+ansible-galaxy collection install amazon.aws
+   ```
+* На стороне AWS создается пользователь с прававми:
+![]()
+  
+* Експорт AWS_ACCESS_KEY_ID и AWS_SECRET_ACCESS_KEY
+
+* Для работы модуля необходим boto3 botocore 
+* Устанавливаем питон и необходимые компоненты, помним что yum не работает с python3 (создадим ссылку на python2):
+
+```sh
+sudo yum install python-pip
+sudo yum install pip
+sudo ln -sf python2 /usr/bin/python
+pip --version
+pip install boto3
+pip install botocore 
+   ```
+* Вносим изменения в базовый конфиг ансибл (ansible.cfg) :
+
+```sh
+[defaults]
+
+ask_vault_pass = true
+host_key_checking = False
+pipelining = True
+remote_user = ec2-user
+
+[inventory]
+enable_plugins = aws_ec2
+
+   ```
+* Создаем простой dynamic inventory (aws_ec2.yaml):
+
+```sh
+---
+plugin: aws_ec2
+exclude_filters:
+  - tag:Name:Master
+
+   ```
+* Проверка работы:
+
+```sh
+ansible-inventory -i  aws_ec2.yaml --list
+   ```
 
 
 
