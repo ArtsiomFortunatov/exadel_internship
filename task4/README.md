@@ -137,6 +137,7 @@ pma_password: *******
 ansible-galaxy collection install amazon.aws
    ```
 * На стороне AWS создается пользователь с прававми:
+
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task4/image/extratask41.png)
   
 * Експорт AWS_ACCESS_KEY_ID и AWS_SECRET_ACCESS_KEY
