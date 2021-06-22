@@ -109,10 +109,10 @@ ansible all -i /home/ec2-user/hosts -m ping
 
 ```sh
 ---
-mysql_root_password: 123a456B
-mysql_password: 123a456B
-pma_host: 172.17.0.3
-pma_password: 123a456B 
+mysql_root_password: *******
+mysql_password: *******
+pma_host: *******
+pma_password: *******
    ```
 * Файл зашифрован vault (ansible-vault encrypt vars.yaml), содержимое файла без ввода пароля:
 
