@@ -2,7 +2,7 @@
 ## Task5
 ### Subtask 1. Устанвока Jenkins:
 
-* Установка в как docker контейнер:
+* Установка в docker контейнер:
 
 ```sh
  docker pull jenkins/jenkins
