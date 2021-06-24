@@ -94,3 +94,6 @@ pipeline {
     }
 }
 ```
+* Результат на хосте:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task5/image/task6.png)
