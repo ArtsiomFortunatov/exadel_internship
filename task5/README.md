@@ -34,6 +34,38 @@
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task5/image/First%20job.png)
 
 
+### Subtask 5. Docker ps:
+
+* Добавляем docker хост как агент (dockerhost) :
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task5/image/addDockerHost_agent.png)
+
+* Создаем pipeline:
+
+```sh
+pipeline {
+    agent { label 'dockerhost'}
+
+    stages {
+        stage('DockerHOST') {
+            steps {
+                sh '''
+                  echo $HOSTNAME
+                  docker ps -a
+                '''  
+            }
+        }
+    }
+}
+```
+
+* Результат:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task5/image/resultask5.png)
+
+* Сравнение с хостом:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task5/image/resultask52.png)
 
 
 
