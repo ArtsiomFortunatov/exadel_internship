@@ -69,3 +69,28 @@ pipeline {
 
 
 
+### Subtask 5. Dockerfile in Jenkins:
+
+* Используем модуль git в Jenkins
+* Pipeline:
+
+```sh
+pipeline {
+    agent { label 'dockerhost'}
+    stages {
+        stage('DockerFILE') {
+            steps {
+                git url: 'https://github.com/ArtsiomFortunatov/exadel_internship.git'
+                sh '''
+                  echo $HOSTNAME
+                  cd task3
+                  cat Dockerfile
+                  mkdir -p forhttpd
+                  cp index.html ./forhttpd
+                  docker image build -t mydockerfile:jenkins .
+                '''  
+            }
+        }
+    }
+}
+```
