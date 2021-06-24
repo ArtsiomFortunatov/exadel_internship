@@ -69,7 +69,7 @@ pipeline {
 
 
 
-### Subtask 5. Dockerfile in Jenkins:
+### Subtask 6. Dockerfile in Jenkins:
 
 * Используем модуль git в Jenkins
 * Pipeline:
