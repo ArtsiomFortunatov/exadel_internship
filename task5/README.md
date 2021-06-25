@@ -111,7 +111,7 @@ pipeline {
 pipeline {
     agent { docker { image 'httpd'} }
     stages {
-        stage('Test') {
+        stage('send env') {
             steps {
               wrap([$class: "MaskPasswordsBuildWrapper",
                 varPasswordPairs: [[password: PASSWORD1]]]) {
