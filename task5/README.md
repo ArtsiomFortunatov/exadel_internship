@@ -114,7 +114,6 @@ pipeline {
             steps {
               wrap([$class: "MaskPasswordsBuildWrapper",
                 varPasswordPairs: [[password: PASSWORD1]]]) {
-                 echo "Password: ${PASSWORD1}" 
                  sh '''
                  echo "Password: ${PASSWORD1}" 
                  docker  run -d -e PASSWORD=$PASSWORD1 httpd
