@@ -99,3 +99,30 @@ pipeline {
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task5/image/task6.png)
 
 ### Subtask 7. Шифрованная переменная:
+
+* Для того чтобы не "светить" переменную в теле Pipeline, зададим её в Global environment:
+
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task5/image/GlobaEnv.png)
+
+* Состсавим Pipeline, предварительно установив модуль Mask Passwords который зашифрует нужную нам переменную:
+
+pipeline {
+    agent { docker { image 'httpd'} }
+    stages {
+        stage('Test') {
+            steps {
+              wrap([$class: "MaskPasswordsBuildWrapper",
+                varPasswordPairs: [[password: PASSWORD1]]]) {
+                 echo "Password: ${PASSWORD1}" 
+                 sh '''
+                 echo "Password: ${PASSWORD1}" 
+                 docker  run -d -e PASSWORD=$PASSWORD1 httpd
+                 '''
+                                 }
+            }
+        }
+    }
+}
+
+
