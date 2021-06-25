@@ -107,6 +107,7 @@ pipeline {
 
 * Состсавим Pipeline, предварительно установив модуль Mask Passwords который зашифрует нужную нам переменную:
 
+```sh
 pipeline {
     agent { docker { image 'httpd'} }
     stages {
@@ -123,5 +124,5 @@ pipeline {
         }
     }
 }
-
+```
 
