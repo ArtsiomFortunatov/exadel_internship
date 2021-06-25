@@ -126,6 +126,6 @@ pipeline {
 }
 ```
 
-*При выполнении job пароль (или любая нужная переменная) скрыт:
+* При выполнении job пароль (или любая нужная переменная) скрыт:
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task5/image/checktask72.png)
