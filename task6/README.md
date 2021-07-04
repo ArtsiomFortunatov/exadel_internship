@@ -11,11 +11,17 @@ su - postgres
 createdb EXADEL
 ```
 
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/createDB.png)
+
 ```sh
 CREATE TABLE Students (ID serial , Student VARCHAR (20) UNIQUE NOT NULL, StudentID serial UNIQUE NOT NULL);
 
 CREATE TABLE Result  (ID serial , StudentID INTEGER  UNIQUE NOT NULL, TASK1 VARCHAR(10) NOT NULL, TASK2 VARCHAR(10) NONULL, TASK4 VARCHAR(10) NOT NULL, FOREGIN KEY (StudentID) REFERENCES Students (StudentID));
 ```
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/TableStudents.png)
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/TableResult.png)
 
 ### Subtask 3. Поиск по связанным таблицам:
  * Таблицы связываем по внеишим ключам столбцов studentid
