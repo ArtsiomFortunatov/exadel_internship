@@ -33,3 +33,5 @@ FROM students AS x
 INNER JOIN result AS y ON (x.studentid = y.studentid)
 WHERE x.student = 'Артём Фортунатов';
 ```
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask3.png)
