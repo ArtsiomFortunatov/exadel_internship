@@ -74,9 +74,9 @@ psql EXADEL_RESTORE < EXADELBACKUP
 
 ```sh
 ---
-mysql_root_password: 123a456B
-mysql_password: 123a456B
-mysql_user: admin
+mysql_root_password: *******
+mysql_password: *******
+mysql_user: *******
 ```
 
 * Содержимое tasks/main.yaml
