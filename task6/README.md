@@ -59,3 +59,70 @@ psql EXADEL_RESTORE < EXADELBACKUP
 * Проверка:
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask43.png)
+
+### Subtask 5. Ansible role:
+
+* Создадим дереов папок для роли:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask5.png)
+
+* Сконфигурируем ansible.cfg, укзав путь к нашей роли:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask52.png)
+
+* Содержимое vars/main.yaml
+
+```sh
+---
+mysql_root_password: 123a456B
+mysql_password: 123a456B
+mysql_user: admin
+```
+
+* Содержимое tasks/main.yaml
+
+```sh
+---
+    - name: insatll Python3
+      yum:
+        name: python36
+        state: latest
+      vars:
+          ansible_python_interpreter: /bin/python2.7
+    - name: insatll Modyle
+      pip:
+        name: "docker<5"
+        executable: pip3.6
+    - name: Insatll container mysql
+      docker_container:
+        name: mysql
+        image: mysql
+        ports: ['3306:3306']
+        hostname: mysql
+        env:
+          MYSQL_ROOT_PASSWORD: "{{ mysql_root_password }}"
+          MYSQL_USER: "{{ mysql_user }}"
+          MYSQL_PASSWORD: "{{ mysql_password }}"
+          MYSQL_DATABASE: TESTDB
+      vars:
+          ansible_python_interpreter: /bin/python3.6
+```
+
+
+* Плейбук для запуска роли:
+
+```---
+- hosts: all
+  become: true
+  roles:
+   - sql
+```
+* Плейбук отработал:
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask55.png)
+
+* Проверка. Контейнер создался, перейдем в контейнер и подключимся к созадной базе с заданными кредами:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask54.png)
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask53.png)
+
