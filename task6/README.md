@@ -50,7 +50,7 @@ pg_dump EXADEL > EXADELBACKUP
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask42.png)
 
-* Команды ждя востановления:
+* Команды для восстановления:
 
 ```sh  
 createdb EXADEL_RESTORE
