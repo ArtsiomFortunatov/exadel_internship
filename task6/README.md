@@ -35,3 +35,27 @@ WHERE x.student = 'Артём Фортунатов';
 ```
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask3.png)
+
+ 
+### Subtask 4. Backup:
+
+ * Команда для резервной копии:
+
+```sh
+pg_dump EXADEL > EXADELBACKUP
+```
+ * Удаляем БД:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask41.png)
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask42.png)
+
+* Команды ждя востановления:
+
+```sh  
+createdb EXADEL_RESTORE
+psql EXADEL_RESTORE < EXADELBACKUP
+```
+* Проверка:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task6/image/subtask43.png)
