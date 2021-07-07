@@ -13,7 +13,7 @@ docker-compose docker-compose_v3_centos_pgsql_latest.yaml up -d
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/task1.2.png)
 
-Subtask 1.2 - 1.7:
+### Subtask 1.2 - 1.7:
 
 * Устанвока агентов:
 
