@@ -29,7 +29,7 @@ iptables -A INPUT -p tcp -s 192.168.99.148 --dport 10050 -m state --state NEW,ES
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/Dashboard2.png)
 
-**Active check. Принципиальное отличие в настройке это верное конфигурирование hostname и SercerActive на стороне агента**
+**Active check. Принципиальное отличие в настройке это верное конфигурирование hostname и ServerActive на стороне агента**
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/active%20agent1.png)
 
