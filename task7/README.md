@@ -23,11 +23,19 @@ yum install zabbix zabbix-agent
 iptables -A INPUT -p tcp -s 192.168.99.148 --dport 10050 -m state --state NEW,ESTABLISHED -j ACCEPT. // 192.168.99.148 -адрес zabbix сервера
 
 ```
-* Дашборты + Active check  / passive check 
+* Дашборты +  passive check 
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/Dashboard1.png)
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/Dashboard2.png)
+
+**Active check. Принципиальное отличие в настройке это верное конфигурирование hostname и SercerActive на стороне агента**
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/active%20agent1.png)
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/active%20agent3.png)
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/active%20agent.png)
 
 * ICMP check
 
