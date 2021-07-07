@@ -37,13 +37,13 @@ iptables -A INPUT -p tcp -s 192.168.99.148 --dport 10050 -m state --state NEW,ES
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/active%20agent.png)
 
-* ICMP check
+**ICMP check**
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/icmp.png)
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/icmp2.png)
 
-* Maintenance
+**Maintenance**
 
 * Алерты видны:
 
