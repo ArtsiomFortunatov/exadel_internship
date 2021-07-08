@@ -54,3 +54,7 @@ iptables -A INPUT -p tcp -s 192.168.99.148 --dport 10050 -m state --state NEW,ES
 * После включения Maintenance :
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/maintense1.png)
+
+* All dashboard
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/allDashboard.png)
