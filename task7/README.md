@@ -58,3 +58,23 @@ iptables -A INPUT -p tcp -s 192.168.99.148 --dport 10050 -m state --state NEW,ES
 * All dashboard
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/allDashboard.png)
+
+### Subtask 2 ELK
+
+*  Устанвоку производил на ВМ, проверка работоспособности + индексы
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/elk1.png)
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/elk2.png)
+
+* Простые Dashboards:
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/elk3.png) 
+
+### Subtask 3 Grafana
+
+* Графана установлена на ту же ВМ (поэтому при подключении к ELK укзано localhost, выбран стандартынй идекс с timestamp меткой)
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/grafana1.png)
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/grafana2.png)
