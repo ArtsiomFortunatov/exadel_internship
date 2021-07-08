@@ -67,9 +67,50 @@ iptables -A INPUT -p tcp -s 192.168.99.148 --dport 10050 -m state --state NEW,ES
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/elk2.png)
 
+
+![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/patern.png)
+
 * Простые Dashboards:
 
 ![](https://github.com/ArtsiomFortunatov/exadel_internship/blob/master/task7/image/elk3.png) 
+
+* Конфигурация logstash.conf с использыванием gelf:
+
+```sh
+
+input {
+  beats {
+    port => 5044
+  }
+ gelf {
+        port => 12201
+        type => gelf
+   }
+}
+ 
+output {
+  if{
+  elasticsearch {
+    hosts => "elasticsearch:9200"
+    manage_template => false
+    index => "%{[@metadata][beat]}-%{+YYYY.MM.dd}"
+    document_type => "%{[@metadata][type]}"
+  }
+  }
+   else if [type] == "gelf" {
+      elasticsearch {
+      hosts => "elasticsearch:9200"
+      index => "gelf-%{+YYYY.MM.dd}"
+      }
+    }
+    else [type] == "centos" {
+      elasticsearch {
+      hosts => "elasticsearch:9200"
+      index => "centos-%{+YYYY.MM.dd}"
+      }
+    }
+}
+```
 
 ### Subtask 3 Grafana
 
