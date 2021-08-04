@@ -1,0 +1,55 @@
+**устанавливаем helm**
+
+curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
+sudo apt-get install apt-transport-https --yes
+echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+sudo apt-get update
+sudo apt-get install helm
+
+**создаем namespace cattle-system**
+
+kubectl create namespace cattle-system
+
+**добавим репы ранчера**
+
+helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+
+**устанваливаем Rancher**
+
+**********************
+
+**добавляем PV**
+kubectl create -f - <<EOF
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-volume1
+spec:
+  storageClassName:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/ubuntu/pvfprom"
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-volume2
+spec:
+  storageClassName:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/ubuntu/pvfprom2"
+
+
+
+
+
+*******************
+
+helm install opsgoodness / kube-prometheus --namespace foo --set alertmanager.service.type = NodePort --set alertmanager.service.nodePort = 30903 --set prometheus.service.type = NodePort --set prometheus.service.nodePort = 30900
