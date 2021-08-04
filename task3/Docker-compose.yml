@@ -1,18 +1,11 @@
-version: '2'
-services:
-  web:
-    image: ${ImgWEB}
-    ports:
-      - "${PortWEB}"
-  java:
-    container_name: myjava
-    image: ${ImgJava}
-    ports:
-      - "${PortJava}"
-    depends_on:
-      - "db"
-  db:
-    container_name: mydb
-    image: ${ImgDB}
-    ports:
-      - "${PortDB}"
+---
+
+- hosts: all
+
+  tasks:
+    - name: Create A record
+      win_dns_record:
+        name: "TEST1"
+        type: "A"
+        value: "10.15.1.55"
+        zone: "dev.bn.by"
